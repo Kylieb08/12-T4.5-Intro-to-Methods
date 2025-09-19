@@ -4,9 +4,11 @@
     {
         static void Main(string[] args)
         {
+            //Variables
             int bugs;
             string anotherJoke;
 
+            //Tutorial
             Console.WriteLine("Press ENTER for a joke:");
             Console.ReadLine();
             Joke(); //This "calls" or "invokes" the method Joke()
@@ -19,7 +21,6 @@
                 Console.WriteLine("How many bugs are in your code?");
                 Int32.TryParse(Console.ReadLine(), out bugs);
                 Joke(bugs);
-                Console.ReadLine();
             }
 
             else
@@ -31,6 +32,22 @@
                 Thread.Sleep(1000);
                 Console.WriteLine("Goodbye");
             }
+
+            Console.WriteLine("Press ENTER to continue to the assignment");
+            Console.ReadLine();
+            Console.Clear();
+
+            //Assignment
+            Console.WriteLine("Here is some ASCII art");
+            Console.WriteLine();
+            Console.WriteLine("Here is a deer");
+            DrawDeer();
+            Console.WriteLine();
+            Console.WriteLine("and an owl");
+            DrawOwl();
+            Console.WriteLine();
+            Console.WriteLine("and side six of a die");
+            DrawDieSix();
         }
 
         public static void Joke()
@@ -54,6 +71,38 @@
             Console.WriteLine("Fix a bug, run it again,");
             Thread.Sleep(500);
             Console.WriteLine((++numBugs) + " little bugs in the code.");
+        }
+
+        //Assignment
+
+        //ASCII Art
+        public static void DrawDeer()
+        {
+            Console.WriteLine("(             )             ");
+            Console.WriteLine(" `--(_   _)--'              ");
+            Console.WriteLine("      Y-Y                   ");
+            Console.WriteLine("     /@@ \\                 ");
+            Console.WriteLine("    /     \\                ");
+            Console.WriteLine("    `--'.  \\             , ");
+            Console.WriteLine("        |   `.__________/)  ");
+        }
+
+        public static void DrawOwl()
+        {
+            Console.WriteLine(" (\\_._/)");
+            Console.WriteLine(" ( o o )");
+            Console.WriteLine(" /  V  \\");
+            Console.WriteLine("/(  _  )\\");
+            Console.WriteLine("  ^^ ^^");
+        }
+
+        public static void DrawDieSix()
+        {
+            Console.WriteLine(" ------- ");
+            Console.WriteLine("| *   * |");
+            Console.WriteLine("| *   * |");
+            Console.WriteLine("| *   * |");
+            Console.WriteLine(" ------- ");
         }
     }
 }
