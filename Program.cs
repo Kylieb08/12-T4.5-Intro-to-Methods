@@ -48,6 +48,9 @@
             Console.WriteLine();
             Console.WriteLine("and side six of a die");
             DrawDieSix();
+            Console.WriteLine();
+            Console.WriteLine("Here is a knock knock joke");
+            KnockKnockJoke();
         }
 
         public static void Joke()
@@ -103,6 +106,30 @@
             Console.WriteLine("| *   * |");
             Console.WriteLine("| *   * |");
             Console.WriteLine(" ------- ");
+        }
+
+        public static void KnockKnockJoke()
+        {
+            string whoThere, lettuceWho;
+            Console.WriteLine();
+            Console.WriteLine("Knock knock");
+            whoThere = Console.ReadLine();
+            while (whoThere.ToLower() != "who's there" && whoThere.ToLower() != "who's there?" && whoThere.ToLower() != "whos there?" && whoThere.ToLower() != "whos there")
+            {
+                Console.WriteLine("No, you're supposed to go along with the joke");
+                Console.WriteLine("Try again");
+                whoThere = Console.ReadLine();
+            }
+
+            Console.WriteLine("Lettuce");
+            lettuceWho = Console.ReadLine();
+            while (lettuceWho.ToLower() != "lettuce who" && lettuceWho.ToLower() != "lettuce who?")
+            {
+                Console.WriteLine("No, you're supposed to go along with the joke");
+                Console.WriteLine("Try again");
+                lettuceWho = Console.ReadLine();
+            }
+            Console.WriteLine("Lettuce in. We're cold");
         }
     }
 }
